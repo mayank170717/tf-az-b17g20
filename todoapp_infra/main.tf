@@ -151,6 +151,10 @@ module "vm_password" {
   secret_value   = "P@ssw0rd@123"
 }
 
+resource "azurerm_resource_group" "akash"{
+  name = "akash-rg"
+  location = "Central India"
+=======
 module "vm_password1" {
   depends_on     = [module.key_vault]
   source         = "../modules/azurerm_key_vault_secret"
@@ -158,4 +162,5 @@ module "vm_password1" {
   rg_name        = "404-todoapp"
   secret_name    = "vm-password"
   secret_value   = "P@ssw0rd@123"
+
 }
