@@ -151,3 +151,7 @@ module "vm_password" {
   secret_value   = "P@ssw0rd@123"
 }
 
+resource "azurerm_resource_group" "akash"{
+  name = "akash-rg"
+  location = "Central India"
+}
