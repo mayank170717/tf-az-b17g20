@@ -4,7 +4,7 @@ module "resource_group" {
   location = "Central India"
 }
 
-module "resource_group" {
+module "resource_group1" {
   source   = "../modules/azurerm_resource_group"
   rg_name  = "4044-todoapp"
   location = "West US"
