@@ -4,6 +4,12 @@ module "resource_group" {
   location = "Central India"
 }
 
+module "resource_group1" {
+  source   = "../modules/azurerm_resource_group"
+  rg_name  = "4044-todoapp"
+  location = "West US"
+}
+
 module "virtual_network" {
   depends_on    = [module.resource_group]
   source        = "../modules/azurerm_virtual_network"
