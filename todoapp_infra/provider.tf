@@ -5,9 +5,16 @@ terraform {
       version = "4.34.0"
     }
   }
+    backend "azurerm" {
+    resource_group_name = "404-todoapp"
+    storage_account_name = "404storageaccount"
+    container_name       = "tfstate"
+    key                  = "404.tfstate"
+  }
+
 }
 
 provider "azurerm" {
   features {}
-  subscription_id = "35e5fe36-f38c-45e9-bc91-ab9e1660e448"
+  subscription_id = "a1a28045-a62e-4eb2-af69-c05bca1267b0"
 }
